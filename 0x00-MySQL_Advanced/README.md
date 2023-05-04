@@ -1,7 +1,3 @@
-<p>
-<img width="260" height="170" src="https://www.flaticon.com/svg/static/icons/svg/2772/2772128.svg" align="right" >
-</p>
-
 ![Pep8 style](https://img.shields.io/badge/PEP8-style%20guide-purple?style=round-square)
 ![Latest commit](https://img.shields.io/github/last-commit/Ngoni19/alx-backend-storage/main?style=round-square)
 
