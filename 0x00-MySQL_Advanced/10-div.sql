@@ -1,0 +1,15 @@
+-- Script creates Safe division
+DROP FUNCTION IF EXISTS SafeDiv;
+DELIMITER //
+CREATE FUNCTION SafeDiv(a FLOAT, b FLOAT)
+RETURNS FLOAT DETERMINISTIC
+BEGIN
+    IF (b = 0.0)
+    THEN
+        RETURN 0.0;
+    ELSE
+        RETURN a / b;
+    END IF;
+END//
+DELIMITER ;
+
