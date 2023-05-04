@@ -5,7 +5,7 @@ CREATE PROCEDURE ComputeAverageWeightedScoreForUser(
     user_id INT
 )
 BEGIN
-    DECLARE av_w_scrore FLOAT();
+    DECLARE av_w_scrore FLOAT;
     SET av_w_scrore = (SELECT SUM(score * weight) / SUM(weight)
                         FROM users AS U
                         JOIN corrections as C ON U.id=C.user_id
