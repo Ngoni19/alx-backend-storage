@@ -3,8 +3,8 @@ DROP PROCEDURE IF EXISTS AddBonus;
 DELIMITER //
 CREATE PROCEDURE AddBonus(
     IN user_id INT,
-    IN score FLOAT,
-    IN project_name VARCHAR(255))
+    IN project_name VARCHAR(255),
+    IN score FLOAT)
 BEGIN
     DECLARE project_id INT;
     IF (SELECT COUNT(*) FROM projects WHERE name = project_name) = 0
