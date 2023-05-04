@@ -1,11 +1,14 @@
--- Email validation to sent 
+-- SQL script that creates a trigger that resets
+-- the attribute valid_email only when the email has been changed. 
+DELIMITER $$
 CREATE TRIGGER change_email
 BEFORE UPDATE ON users
 FOR EACH ROW
 BEGIN
-    DECLARE valid_email INT;
-    CALL sp_TransferData(valid_email);
-    IF valid_email < 0 THEN
-        SET NEW.email = OLD.email;
-    END IF;
-END;
+IF NEW.email <> OLD.email
+THEN
+    SET NEW.valid_email = 0;
+END IF;
+END
+$$
+DELIMITER;
