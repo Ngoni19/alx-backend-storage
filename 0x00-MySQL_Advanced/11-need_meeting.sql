@@ -1,7 +1,10 @@
 -- Script creates  view need meeting
+DROP VIEW IF EXISTS need_meeting;
 CREATE VIEW need_meeting AS
-SELECT s.name
-FROM students s
-LEFT JOIN meetings m ON s.id = m.student_id AND m.meeting_date >= ADDDATE(CURDATE(),
-interval -1 MONTH)
-WHERE s.score < 80 AND m.id IS NULL;
+SELECT name FROM students
+WHERE
+    score < 80 AND
+    (last_meeting < ADDDATE(CURDATE(), interval -1 MONTH)
+        OR
+    last_meeting IS NULL
+    );
