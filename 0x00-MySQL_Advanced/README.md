@@ -1,7 +1,7 @@
 ![Advanced SQL](https://img.shields.io/badge/SQL-advanced%20SQL-orange)
 ![Latest commit](https://img.shields.io/github/last-commit/Ngoni19/alx-backend-storage/main?style=round-square)
 
-# :colombia: 0x0C. MySQL advanced
+## MySQL advanced
 
 - How to create tables with constraints
 - How to optimize queries by adding indexes
