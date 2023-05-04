@@ -1,4 +1,4 @@
-![Pep8 style](https://img.shields.io/badge/PEP8-style%20guide-purple?style=round-square)
+![Advanced SQL](https://img.shields.io/badge/SQL-advanced%20SQL-orange)
 ![Latest commit](https://img.shields.io/github/last-commit/Ngoni19/alx-backend-storage/main?style=round-square)
 
 # :colombia: 0x0C. MySQL advanced
