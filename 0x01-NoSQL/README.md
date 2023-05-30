@@ -1,7 +1,7 @@
 ![Advanced SQL](https://img.shields.io/badge/SQL-advanced%20SQL-orange)
 ![Latest commit](https://img.shields.io/github/last-commit/Ngoni19/alx-backend-storage/main?style=round-square)
 
-# :colombia: NoSQL
+# NoSQL
 
 - What NoSQL means
 - What is difference between SQL and NoSQL
