@@ -1,0 +1,3 @@
+// MongoD - List collection documents school
+db.school.find();
+
