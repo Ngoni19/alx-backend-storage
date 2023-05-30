@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """ Script -> shows top students  """
-import pymongo
 
 
 def top_students(mongo_collection):
