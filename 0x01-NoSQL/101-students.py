@@ -3,23 +3,17 @@
 import pymongo
 
 
-def tp_st(mongo_collection):
-    """ Method: Average top students
+def top_students(mongo_collection):
+    students = mongo_collection.find()
+    scores = {}
+    for student in students:
+        name = student["name"]
+        marks = student["marks"]
+        avg_score = sum(marks)/len(marks)
+        scores[name] = {"averageScore": avg_score}
 
-        Args:
-            mongo_collection: Collection to find avg top
+    sorted_scores = sorted(scores.items(), key=lambda x: x[1]["averageScore"], reverse=True)
+    sorted_students = [{"name": item[0], "averageScore": item[1]["averageScore"]} for item in sorted_scores]
 
-        Return:
-            List all top students
-    """
-    tp_st = mongo_collection.aggregate([
-        {
-            "$project": {
-                "name": "$name",
-                "averageScore": {"$avg": "$topics.score"}
-            }
-        },
-        {"$sort": {"averageScore": -1}}
-    ])
+    return sorted_students
 
-    return tp_st
