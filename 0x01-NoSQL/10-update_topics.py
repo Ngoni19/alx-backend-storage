@@ -6,7 +6,7 @@ from typing import List
 
 def update_topics(mongo_collection, name, topics):
     """ Method: Change the data
-    
+
         Args:
             mongo_collection:
             name: School
@@ -17,4 +17,3 @@ def update_topics(mongo_collection, name, topics):
     """
     query: dict = {'name': name}
     mongo_collection.update_many(query, {"$set": {"topics": topics}})
-
